@@ -4,11 +4,11 @@
 # Version:          4
 # Software:         BioDocker base Image
 # Software Version: 08252016
-# Description:      Basic image for BioDocker
-# Website:          http://biodocker.org/
-# Tags:             Genomics|Proteomics|Transcriptomics|General|Metabolomics
+# about.summary:      Basic image for BioDocker
+# about.home:          http://biodocker.org/
+# about.tags:             Genomics|Proteomics|Transcriptomics|General|Metabolomics
 # Provides:         autotools-dev|automake|cmake|curl|fuse|git|wget|zip|openjdk-7-jre|build-essential|pkg-config|python|python-dev|python-pip|zlib1g-dev
-# Base Image:       ubuntu:16.04
+################## BASE IMAGE ###################### :       ubuntu:16.04
 # Build Cmd:        docker build biodckr/biodocker .
 # Pull Cmd:         docker pull biodckr/biodocker
 # Run Cmd:          docker run biodckr/biodocker
@@ -16,6 +16,16 @@
 
 # Source Image
 FROM ubuntu:16.04
+
+# Required Metadata
+
+LABEL base_image=="ubuntu:16.04"
+LABEL version=4
+LABEL software.version="08252016"
+LABEL software="biodocker_base_image"
+LABEL about.summary="Basic image for BioDocker"
+LABEL about.home="http://biodocker.org/"
+LABEL about.license="SPDX:Apache-2.0"
 
 # Set noninterative mode
 ENV DEBIAN_FRONTEND noninteractive

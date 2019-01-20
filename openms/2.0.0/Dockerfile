@@ -1,18 +1,21 @@
-# Base Image
-FROM biocontainers/biocontainers:latest
+################## BASE IMAGE ######################
 
-# Metadata
-LABEL base.image="biocontainers:latest"
-LABEL version="2"
+FROM biocontainers/biocontainers:v1.0.0_cv4
+
+################## METADATA ######################
+LABEL base_image="biocontainers:v1.0.0_cv4"
+LABEL version="3"
 LABEL software="OpenMS"
 LABEL software.version="2.0.0-4build2"
-LABEL description="C++ libraries ans tools for MS/MS data analysis"
-LABEL website="http://open-ms.sourceforge.net/"
-LABEL documentation="http://open-ms.sourceforge.net/"
-LABEL license="http://open-ms.sourceforge.net/"
-LABEL tags="Proteomics"
+LABEL about.summary="C++ libraries ans tools for MS/MS data analysis"
+LABEL about.home="http://open-ms.sourceforge.net/"
+LABEL about.documentation="http://open-ms.sourceforge.net/"
+LABEL about.license_file="https://github.com/OpenMS/OpenMS/blob/develop/LICENSE"
+LABEL about.license="SPDX:BSD-1-Clause"
+LABEL about.tags="Proteomics"
+LABEL extra.identifiers.biotools="openms"
 
-# Maintainer
+################## MAINTAINER ######################
 MAINTAINER Felipe da Veiga Leprevost <felipe@leprevost.com.br>
 
 USER root

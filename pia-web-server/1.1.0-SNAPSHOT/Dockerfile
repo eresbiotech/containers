@@ -1,18 +1,20 @@
-# Base Image
-FROM biocontainers/biocontainers:latest
+################## BASE IMAGE ######################
+FROM biocontainers/biocontainers:v1.0.0_cv4
 
-# Metadata
-LABEL base.image="biocontainers:latest"
-LABEL version="1"
+################## METADATA ######################
+LABEL base_image="biocontainers:v1.0.0_cv4"
+LABEL version="2"
 LABEL software="PIA-web-server"
 LABEL software.version="1.1.0-SNAPSHOT"
-LABEL description="Web server for PIA - Protein Inference Algorithms"
-LABEL website="https://github.com/mpc-bioinformatics/pia"
-LABEL documentation="https://github.com/mpc-bioinformatics/pia"
-LABEL license="https://github.com/mpc-bioinformatics/pia"
-LABEL tags="Proteomics"
+LABEL about.summary="Web server for PIA - Protein Inference Algorithms"
+LABEL about.home="https://github.com/mpc-bioinformatics/pia"
+LABEL about.documentation="https://github.com/mpc-bioinformatics/pia"
+LABEL about.license_file="https://github.com/mpc-bioinformatics/pia"
+LABEL about.license="SPDX:Apache-2.0"
+LABEL about.tags="Proteomics"
+LABEL extra.identifiers.biotools="pia"
 
-# Maintainer
+################## MAINTAINER ######################
 MAINTAINER Julian Uszkoreit <julian.uszkoreit@rub.de>
 
 USER root

@@ -1,19 +1,23 @@
-# Base Image
-FROM biocontainers/biocontainers:latest
+################## BASE IMAGE ######################
+FROM biocontainers/biocontainers:v1.0.0_cv4
 
-# Metadata
-LABEL base.image="biocontainers:latest"
-LABEL version="3"
+################## METADATA ######################
+LABEL base_image="biocontainers:v1.0.0_cv4"
+LABEL version="4"
 LABEL software="Comet"
 LABEL software.version="2016010"
-LABEL description="an open source tandem mass spectrometry sequence database search tool"
-LABEL website="http://comet-ms.sourceforge.net/"
-LABEL documentation="http://comet-ms.sourceforge.net/parameters/parameters_2016010/"
-LABEL license="http://comet-ms.sourceforge.net/"
-LABEL tags="Proteomics"
+LABEL about.summary="an open source tandem mass spectrometry sequence database search tool"
+LABEL about.home="http://comet-ms.sourceforge.net/"
+LABEL about.documentation="http://comet-ms.sourceforge.net/parameters/parameters_2016010/"
+LABEL about.license_file="http://comet-ms.sourceforge.net/"
+LABEL about.license="SPDX:Apache-2.0"
+LABEL extra.identifiers.biotools="comet"
+LABEL about.tags="Proteomics"
 
-# Maintainer
+################## MAINTAINER ######################
 MAINTAINER Felipe da Veiga Leprevost <felipe@leprevost.com.br>
+
+################## INSTALLATION ######################
 
 USER biodocker
 
